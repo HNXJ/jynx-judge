@@ -1,31 +1,24 @@
 # gamma-labyrinth
 
-## Role in Gamma Labyrinth
-top-level skeleton/world front door; not runtime, not truth storage, not UI.
+Pluggable validators and rubrics with typed outcomes.
 
-## Plane Classification
-World Plane.
+Proposed future name: **jynx-judge** (proposal, not renamed yet)
 
-## Truth-Safety Note
-`truth_mode: truth_safe_unverified`. This repository does not store scientific truth or runtime state.
+## Place in the 7-repo layout
 
-## Coordination
-Refer to GitHub Project `gamma` for tasks and issues.
+Plane: **JUDGE**. See [HNXJ/jynx-arena](https://github.com/HNXJ/jynx-arena) and its [architecture](https://github.com/HNXJ/jynx-arena/blob/main/docs/protocol/ARCHITECTURE.md) (ARENA, RULES, SCIENCE, LAB, ENGINE, JUDGE, WORLD). The current jynx-arena runtime is proposed to become **jynx-engine**; **jynx-world** (event ledger, projections) is a new proposed repo.
 
-## Guidelines
-Agents must verify branch/status before starting work.
+## Holds today
 
-## Doctrine Sources
+- `src/gamma_labyrinth/` including `judge.py` (TrophyJudge) and game/server code, with `tests/`.
+- Doctrine in `docs/doctrine/`; `events/`, `runtime/windows/`, run scripts.
+- World-seed material here is proposed to move to the new **jynx-world**.
 
-The generalized Gamma Labyrinth doctrine sources live in `docs/doctrine/`.
+## Shared root layout (target, not yet applied)
 
-These files are Control/Doctrine artifacts, not Truth-plane receipts. Scientific state requires receipt-backed validation; otherwise use `truth_mode: truth_safe_unverified`.
+`artifacts/`, `docs/`, `src/`, `schemas/`, `tests/`, `tournaments/`, `README.md` — see [SHARED_ROOT_LAYOUT](https://github.com/HNXJ/jynx-arena/blob/main/docs/protocol/SHARED_ROOT_LAYOUT.md).
 
-Local/private workspace context is intentionally excluded from this public skeleton repo.
+## Truth safety
 
-## Ignore Rules
-This repository ignores `.DS_Store`, `*.npy`, `*.mat`, and `*.html`.
+A Judge PASS means a submission met a rubric under a protocol version; it is not scientific truth.
 
-## Coordination
-
-This repository follows the [GAMMA-BUS Coordination Doctrine](GEMINI.md). Agents should refer to `GEMINI.md` for specific instructions and coordination rules.
