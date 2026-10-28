@@ -1,10 +1,10 @@
 # state
 
-Stamp: jynx-judge@main@037eb40 · 2026-10-28
+Stamp: jynx-judge@main@879c805 · 2026-10-28
 
 ## Gate
 
-`PYTHONPATH=src python -m pytest tests -q` (pytest 8.4.1, no asyncio plugin): 1 failed, 6 passed. Failure: test_game_controls async test, no plugin (T-1).
+`pip install -r requirements-dev.txt`, then `PYTHONPATH=src python -m pytest tests -q`: 7 passed, 0 failed (fresh venv, pytest 8.4.1, pytest-asyncio 1.4.1).
 
 ## Layout facts
 
@@ -12,4 +12,4 @@ Stamp: jynx-judge@main@037eb40 · 2026-10-28
 
 ## Next
 
-T-1.
+T-2.
